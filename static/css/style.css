@@ -1,0 +1,41 @@
+:root{
+  --bg-1: #0f172a;
+  --bg-2: #2751a3;
+  --accent: #7c5cff;
+  --glass: rgba(255,255,255,0.06);
+  --glass-2: rgba(255,255,255,0.03);
+  --text: #e6eef8;
+  --muted: #9fb0d3;
+}
+
+*{box-sizing:border-box;font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+
+body{
+  margin:0;
+  background: linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 100%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+
+.bg-container{
+  background-image:
+    radial-gradient(600px 300px at 10% 20%, rgba(124,92,255,0.12), transparent 6%),
+    radial-gradient(500px 200px at 90% 80%, rgba(0,210,255,0.06), transparent 8%);
+}
+
+.clock-card{
+  width: min(720px, 94vw);
+  border-radius: 18px;
+  background: rgba(255,255,255,0.02);
+  backdrop-filter: blur(8px) saturate(120%);
+  border: 1px solid rgba(255,255,255,0.04);
+  padding: 28px;
+}
+
+.app-title{ color: var(--muted); }
+.time-display{display:flex;flex-direction:column;align-items:center;gap:6px;}
+.mono{font-family: monospace;}
+#time{font-size: 4rem;}
+#seconds{color:var(--muted);}
+
+.date-display{color:var(--muted);}
